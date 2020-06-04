@@ -47,11 +47,10 @@ class Student
   end
 
   def self.new_from_db(row)
-    new_student = self.new
     name = row[0]
     grade = row[1]
     id = row[2]
-    new_student(name, grade, id)
+    self.new(name, grade, id)
   end
   def update
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
