@@ -27,13 +27,13 @@ class Student
       DROP TABLE IF EXISTS students
     SQL
     DB[:conn].execute(sql)
-  end 
+  end
 
   def update
     sql = "UPDATE students SET name = ?, album = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.album, self.id)
 
-  end 
+  end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
